@@ -1,0 +1,130 @@
+ *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: 0;
+}
+@media (min-width:290px){
+   
+
+
+    #carouselExampleControls {
+        width: auto;
+        margin: auto;
+}
+#carouselExampleControls .carousel-item img{
+        height: 400px;
+      object-fit: cover;
+}
+
+
+h1,h2,h3{
+    padding-top: 10px;
+    text-align: center;
+}
+#lineProducts{
+    border: none;
+    height: 0.2vw;
+     color: black;
+     background-color: black;
+     margin: 0% 10% 2% 10%;
+}
+.flex-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flex-article article{
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 1%;
+    margin: 1vw;
+}
+.flex-article article:hover{
+    background-color: #dbbb80;
+    transition: 0.5s;
+}
+.flex-article img{
+    width: 50vw;
+    height: 40vh;
+    border-radius: 5%;
+}
+.flex-article h2, h3{
+    font-size: 3vw;
+}
+.showAll-btn{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+.showAll-btn button{
+    color: black;
+    background-color: #fff;
+   
+    margin: 2% 1%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.showAll-btn button:hover{
+    color: whitesmoke;
+    background-color: black;
+    transition: 0.5s;
+}
+}
+
+  
+
+@media(min-width:768px){
+   
+  
+#carouselExampleControls .carousel-item img{
+        height: 650px;
+      object-fit: cover;
+}
+.flex-article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.flex-article img{
+    width: 33vw;
+    height: 250px;
+    border-radius: 5%;
+}
+
+
+
+   
+}
+
+@media(min-width:1024px){
+    .flex-article{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+    .flex-article img{
+        width: 18vw;
+        height: 250px;
+        border-radius: 5%;
+    }
+    .flex-article h2, h3{
+        font-size: 1vw;
+    }
+}

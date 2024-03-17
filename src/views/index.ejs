@@ -1,30 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOme</title>
-</head>
+
+<!-- HEAD -->
+<%- include ("partials/head", {tituloWeb: "Home",css: "header.css", css2: "index.css", css3: "footer.css"}); %>
 <body>
-    
-    <header>
-        <nav>
-            
-            <ul>
-                <a href="/"> <li>Inicio </li></a>
-                <a href="/product"> <li>Productos </li></a>
-                <a href="#"> <li>Novedades</li></a>
-                <a href="#"> <li>Carrito de Compras</li></a>
-                <a href="#"> <li> Contactanos</li></a>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- HEADER -->
+    <%- include ("partials/header") %>
 
     <main>
 
-   
-    <h1>soy el home</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/banner1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img\banner2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img\banner3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        
+         <h1>Highlights</h1>
+         <hr id="lineProducts">
+
+         <section class="flex-article">
+           <article>
+            <img src="img/products/almendra.jpg" alt="">
+            <h2>Jabon Almendra</h2>
+            <h3>$price</h3>
+           </article>
+           <article>
+            <img src="img/products/chocolateycanela.jpg" alt="">
+            <h2>Chocolate y Canela</h2>
+            <h3>$price</h3>
+           </article>
+           <article>
+            <img src="img/products/coco.jpg" alt="">
+            <h2> Coco</h2>
+            <h3>$price</h3>
+           </article>
+           <article>
+            <img src="img/products/greenplant.jpg" alt="">
+            <h2>Green Plant </h2>
+            <h3>$price</h3>
+           </article>
+           <article>
+            <img src="img/products/greenplant.jpg" alt="">
+            <h2>Green Plant </h2>
+            <h3>$price</h3>
+           </article>
+           <article>
+            <img src="img/products/greenplant.jpg" alt="">
+            <h2>Green Plant </h2>
+            <h3>$price</h3>
+           </article>
+         </section>
+
+        
+         <div class="showAll-btn">
+          <button type="button" > <a href="/products"></a>Show all products</button>
+          </div>
+    
     </main>
+
+
+
+
+    <!-- FOOTER -->
+    <%- include("partials/footer") %>
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

@@ -1,0 +1,33 @@
+-------MODIFICACIONES-------
+LOGO BUSCAR UBICACION
+ver menu hamburguesa 
+
+
+
+develop product, contact,login, sign up and cart
+
+DATA BASES:
+CREATE TABLE shampoos (
+    id INT primary key auto_inc,
+    name varchar(50),
+    category  INT,
+    price Double,
+    photo,
+    description varchar(100)
+)
+table categories{
+
+}
+table users{
+    
+}
+
+Shampoo{
+    id,
+    name,
+    category,
+    price,
+    photo,
+    description,
+
+}
