@@ -6,7 +6,7 @@ const userController= require("../controllers/userController.js");
 router.get("/login", userController.login);
 
 
-router.get("/sigup", userController.sigup);
+router.get("/singup", userController.singup);
 
 router.get("/contact", userController.contact);
 

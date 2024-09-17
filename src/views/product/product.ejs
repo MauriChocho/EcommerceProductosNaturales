@@ -1,14 +1,140 @@
 <!-- HEAD -->
-<%- include ("../partials/head", {tituloWeb: "Products",css: "header.css", css2: "index.css", css3: "footer.css"}); %>
+<%- include ("../partials/head", {tituloWeb: "Products",css: "header.css", css2: "product.css", css3: "footer.css",css4:"cart.css",css5:"productDetail.css"}); %>
 <body>
     <!-- HEADER -->
     <%- include ("../partials/header") %>
     
-<main>
-<div>
-    <h1>PORDUCTS</h1>
-</div>
+<main class="main-box">
+<div class="search">
+    <h2>Products</h2>
+    <div class="orderBy">
+      <select name="" id="">
+        <option value="" disabled selected hidden >Order by:</option> 
+        <option value="Mas nuevo al más viejo"> Price: Lower to Higher </option>
+        <option value="Mas nuevo al más viejo"> Price: Higher to Lower </option>
+        <option value="Mas nuevo al más viejo"> Newest to oldest </option>
+        <option value="Mas nuevo al mas viejo"> Oldest to Newest </option>
+        <option value="Mas nuevo al mas viejo"> Best seller </option>
+        <option value="Mas nuevo al mas viejo"> A-Z</option>
+        <option value="Mas nuevo al mas viejo"> Z-A </option>
+      </select>
+    </div>
+    <div class="main-flex">
+      <div class="flex-categories">
+    
+        <select name="Categories" id="">
+      <option value="" disabled selected hidden >Categories</option>  
+      <option value=" ">Shampoo</option>  
+      <option value=" ">Conditioner</option>  
+      <option value=" ">Bath bombs</option>  
+      <option value=" ">Soy candle</option>  
+      <option value=" ">Curles</option>  
+      <option value=" ">Soap</option>  
+      </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-article">
+    <% products.forEach(product => {
+        let precioFinal = (product.price * ((100 - product.discount) /100)).toFixed(0)
+        %>
+      
+      <article>
+        <a href="/product/productDetail7/<%=product.idProduct%>">
+          
+          <img src="<%= product.image %>" alt="">
+          <h2>
+                  <%= product.name%>
+                </h2>
+                <p>
+                  <%= product.description %>
+                </p>
+                <p>
+                  $<%= product.price %>
+                </p>
+                <p>
+                  <%= product.precioFinal %>% off !
+                </p>
+          
+        </a>
+        
+      </article>
+      
+    <%}); %>
+  </div>
+
+    /* <div class="flex-article">
+    <div class="product">
+      <span class="product__price">$120</span>
+      <img class="product__image" src="img/products/coco.jpg">
+      <h1 class="product__title">Coco Solid Shampoo</h1>
+      <hr />
+      <p>The Coco Shampoo offers breathability, lightweight cushioning and bold style with an injected unit midsole and colorful mesh upper. </p>
+      <a href="/product/productDetail" class="product__btn btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <span class="product__price">$120</span>
+      <img class="product__image" src="img/products/set3.jpg">
+      <h1 class="product__title">Set 3 Solid Conditioner</h1>
+      <hr />
+      <p>The Coco Shampoo offers breathability, lightweight cushioning and bold style with an injected unit midsole and colorful mesh upper. </p>
+      <a href="#" class="product__btn btn">Buy Now</a>
+    </div>
+  </div> */
+
+      <!-- <div class="flex-article" class="padding-articulos">
+
+              <article class="item">
+                <a href="#">
+                <img src="img/products/coco.jpg" alt="">
+                <h3>Nombre</h3>
+                <p> descripcion</p>
+                <p>$precioFinal </p>
+                <p> % off !</p>
+                <i class="fas fa-eye"></i>
+              </article>
+               </a>
+               <article class="item">
+                <a href="#">
+                <img src="img/products/almendra.jpg" alt="">
+                <h3>Nombre</h3>
+                <p> descripcion</p>
+                <p>$precioFinal </p>
+                <p> % off !</p>
+                <i class="fas fa-eye"></i>
+              </article>
+            </a>
+            <article class="item">
+              <a href="#">
+              <img src="img/products/greenplant.jpg" alt="">
+              <h3>Nombre</h3>
+              <p> descripcion</p>
+              <p>$precioFinal </p>
+              <p> % off !</p>
+              <i class="fas fa-eye"></i>
+            </article>
+          </a>
+          <article class="item">
+            <a href="#">
+            <img src="img/products/set3.jpg" alt="">
+            <h3>Nombre</h3>
+            <p> descripcion</p>
+            <p>$precioFinal </p>
+            <p> % off !</p>
+            <i class="fas fa-eye"></i>
+          </article>
+        </a>
+
+             
+          </div>
+        -->
+     
+
+     
 </main> 
+
+
     <!-- FOOTER -->
     <%- include("../partials/footer") %>
 </body>

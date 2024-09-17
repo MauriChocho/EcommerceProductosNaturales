@@ -4,9 +4,9 @@ login: (req,res)=>{
 
     return res.render("user/login");
 },
-sigup: (req,res)=>{
+singup: (req,res)=>{
 
-    return res.render("user/signup");
+    return res.render("user/singnup");
 },
 contact: (req,res)=>{
 

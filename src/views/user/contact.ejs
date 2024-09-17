@@ -1,12 +1,20 @@
 <!-- HEAD -->
-<%- include ("../partials/head", {tituloWeb: "Contact",css: "header.css", css2: "index.css", css3: "footer.css"}); %>
+<%- include ("../partials/head", {tituloWeb: "Contact",css: "header.css", css2: "user.css", css3: "footer.css",css4:"cart.css",css5:"productDetail.css"}); %>
 <body>
     <!-- HEADER -->
     <%- include ("../partials/header") %>
     
 <main>
-<div>
-    <h1>CONTACT</h1>
+<div class="user-form">
+    <h2>Contact</h2>
+
+    <form action="#" method="POST" enctype="multipart/form-data"" class="form-item">
+        
+        <input type="text" placeholder="Insert Name">
+        <input type="email" placeholder="Insert email">
+        <textarea name="" id="" cols="30" rows="10"  placeholder="Let us your message here!"></textarea>
+       <button class="submit-btn" type="submit">Send Message</button>
+    </form>
 </div>
 </main> 
     <!-- FOOTER -->
